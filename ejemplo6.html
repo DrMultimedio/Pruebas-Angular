@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<form ng-app="" name="miForm">
+    Email:
+    <input type="email" name="miCorreo" ng-model="text">
+    <span ng-show="miForm.miCorreo.$error.email">No es un correo válido</span>
+</form>
+
+<p>Escribe tu e-mail. Si el e-mail no es correcto aparecerá un mensaje.</p>
+
+</body>
+</html>
