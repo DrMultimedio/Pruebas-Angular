@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo 5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="miApli">
+	<mi-directiva-chachi> </mi-directiva-chachi>
+	<!-- directive: mi-directiva-chachi -->
+	<div mi-directiva-chachi></div>
+	<div class="mi-directiva-chachi"></div>
+
+	<script>
+		var app = angular.module("miApli", []);
+		app.directive("miDirectivaChachi", function(){
+			return {
+				template: "<h1> Hey, soy directiva chachi </h1>"
+
+			};
+		});
+	</script>
+</body>
+</html>

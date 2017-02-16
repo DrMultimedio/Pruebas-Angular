@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intro</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = "Myapp" ng-controller="miCtrl">
+		<h1>Prueba angular</h1>
+		<input type="text" ng-model="nombre"><br>
+		<input type="text" ng-model="apellidos"><br>
+		<br>
+		Resultado: {{nombre + " " + apellidos}}
+	</div>
+
+	<script>
+		var apli = angular.module('Myapp', []);
+		apli.controller('miCtrl', function($scope){
+
+			$scope.nombre = "Hastaluego";
+			$scope.apellidos = "Mari carmen";
+		});
+
+	</script>
+</body>
+</html>
