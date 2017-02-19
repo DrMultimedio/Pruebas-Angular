@@ -1,19 +1,46 @@
-<div ng-app="myApp" ng-controller="personCtrl">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intro</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{fullName()}}
+</head>
+<body>
+	<h1>Llamada a funciones</h1>
+	<h2>Con ng-app </h2>
 
-</div>
+	<div ng-app = "Myapp" ng-controller="miCtrl">
+		<h1>Prueba angular</h1>
+		<input type="text" ng-model="nombre"><br>
+		<input type="text" ng-model="apellidos"><br>
+		<br>
+		Resultado en el código html: {{nombre + " " + apellidos}} <br>
+		Resultado como función: {{nombreCompleto()}}
+	</div>
+	<h2>Sin ng-app ni controllers </h2>
+	<div">
+		<h1>Prueba angular</h1>
+		<input type="text" ng-model="nombre"><br>
+		<input type="text" ng-model="apellidos"><br>
+		<br>
+		Resultado en el código html: {nombre + " " + apellidos} <br>
+		Resultado como función: {{nombreCompleto()}}
+	</div>
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('personCtrl', function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-    $scope.fullName = function() {
-        return $scope.firstName + " " + $scope.lastName;
-    };
-});
-</script>
+	<script>
+		var apli = angular.module('Myapp', []);
+		apli.controller('miCtrl', function($scope){
+
+			$scope.nombre = "Hasta luego";
+			$scope.apellidos = "Mari carmen";
+
+		    $scope.nombreCompleto = function() {
+		        return $scope.nombre + " " + $scope.apellidos;
+    		};		
+
+		});
+
+	</script>
+</body>
+</html>

@@ -13,13 +13,14 @@
 		<input type="text" ng-model="apellidos"><br>
 		<br>
 		Resultado: {{nombre + " " + apellidos}}
+
 	</div>
 
 	<script>
 		var apli = angular.module('Myapp', []);
 		apli.controller('miCtrl', function($scope){
 
-			$scope.nombre = "Hastaluego";
+			$scope.nombre = "Hasta luego";
 			$scope.apellidos = "Mari carmen";
 		});
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<meta charset="UTF-8">
+	<title>Servlaricios de angu</title>
+</head>
+<body>
+	<div ng-app="miapli" ng-controller="micontrol">
+	<h2>Servicio Location</h2> 
+	<p>Este servicio te da la url de tu página</p>
+	<p>{{miURL}}</p>
+
+	<script>
+		var app = angular.module('miapli',  []);
+		app.controller('micontrol', function($scope, $location){
+			$scope.miURL = $location.absUrl();
+
+		});
+
+	</script>
+	</div>
+</body>
+</html>

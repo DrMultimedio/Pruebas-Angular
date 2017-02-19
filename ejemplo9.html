@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo $http</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body>
+	<h1>Ejemplo 1http</h1>
+	<div ng-app="miApli","  ng-controller="miControlador">
+		<p>El mensaje del día es</p>
+
+	</div>
+	<p>La página hace una petición al servidor, y la respuesta se almacena en la variable "mensaje"</p>
+
+<script>
+	var app = angular.module("miApli", []);
+	app.controller("miControlador", function($scope,$http){
+		$http.get("mensaje.html").then(function(response){
+			$scope.mensaje = response.data;
+		})
+	});	
+</script>
+
+</body>
+</html>
